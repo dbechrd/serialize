@@ -845,7 +845,7 @@ namespace serialize
 
         bool SerializeInteger( int32_t value, int32_t min, int32_t max )
         {
-            serialize_assert( min < max );
+            serialize_assert( min <= max );
             serialize_assert( value >= min );
             serialize_assert( value <= max );
             const int bits = bits_required( min, max );
